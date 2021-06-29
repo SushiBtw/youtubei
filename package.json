@@ -1,6 +1,6 @@
 {
 	"name": "@sushibtw/youtubei",
-	"version": "0.0.1-rc.16",
+	"version": "0.0.1-rc.14",
 	"description": "Simple package to get information from youtube such as videos, playlists, channels, video information & comments, related videos, up next video, and more!",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -8,17 +8,17 @@
 		"test": "test"
 	},
 	"devDependencies": {
-		"@types/jest": "^26.0.19",
-		"@types/node": "^14.14.12",
-		"@typescript-eslint/eslint-plugin": "^4.9.1",
-		"@typescript-eslint/parser": "^4.9.1",
-		"eslint": "^7.15.0",
-		"eslint-plugin-prettier": "^3.2.0",
-		"jest": "^26.6.3",
-		"jest-extended": "^0.11.5",
-		"prettier": "^2.2.1",
-		"ts-jest": "^26.4.4",
-		"typescript": "^4.1.2"
+		"@types/jest": "26.0.19",
+		"@types/node": "14.14.12",
+		"@typescript-eslint/eslint-plugin": "4.9.1",
+		"@typescript-eslint/parser": "4.9.1",
+		"eslint": "7.15.0",
+		"eslint-plugin-prettier": "3.2.0",
+		"jest": "26.6.3",
+		"jest-extended": "0.11.5",
+		"prettier": "2.2.1",
+		"ts-jest": "26.4.4",
+		"typescript": "4.1.2"
 	},
 	"scripts": {
 		"test": "jest",

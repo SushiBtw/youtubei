@@ -24,14 +24,14 @@ export default class HTTP {
 	private _cookie: string;
 	private _hl: string;
 	private _gl: string;
-	private _localAddress?: string;
+	private _defaultOptions: Partial<https.RequestOptions>;
 
-	constructor(client: Client) {
-		const { hl, cookie, gl, localAddress } = client.options;
+	constructor(client: Client, defaultOptions: Partial<https.RequestOptions> = {}) {
+		const { hl, cookie, gl } = client.options;
 		this._cookie = cookie;
 		this._hl = hl;
 		this._gl = gl;
-		this._localAddress = localAddress;
+		this._defaultOptions = defaultOptions;
 	}
 
 	/** Send GET request to Youtube */
@@ -76,8 +76,8 @@ export default class HTTP {
 			const options = {
 				hostname: BASE_URL,
 				port: 443,
-				localAddress: this._localAddress,
 				...partialOptions,
+				...this._defaultOptions,
 				path: `${partialOptions.path}?${qs.stringify(partialOptions.params)}`,
 				headers: {
 					"x-youtube-client-version": INNERTUBE_CLIENT_VERSION,
